@@ -1,0 +1,159 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+
+		<title>Multiroom Chat</title>
+
+		<!-- JQUERY -->
+		<script src="js/jquery-2.2.1.js"></script>
+		<!-- font awesome cdn link -->
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+		<!-- bootstrap - link cdn -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+		<!-- estilo -->
+		<link href="css/style.css" rel="stylesheet">
+
+		<script type="text/javascript">
+
+			$(document).ready(function(){
+				$("#exibe_chat").click(function(){
+					$("#conversa").show();
+					$("#participantes").hide();
+					ocultaNavbar();
+				});
+
+				$("#exibe_participantes").click(function(){
+					$("#participantes").show();
+					$("#conversa").hide();
+					ocultaNavbar();
+				});
+			});
+
+			function ocultaNavbar(){
+				$("#btn_navbar_toggle").attr("class","navbar-toggle collapsed");
+				$("#navbar-collapse-1").attr("class","navbar-collapse collapse");
+				$("#btn_navbar_toggle").attr("aria-expanded","false");
+				$("#navbar-collapse-1").attr("aria-expanded","false");
+			}
+		</script>
+	</head>
+
+	<body>
+
+
+		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1" id="btn_navbar_toggle">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#" id=""><img src="images/multiroom_chat_2.png" class="img-responsive logo" alt="Multiroom Chat" /></a>
+				</div>
+
+
+				<div class="collapse navbar-collapse" id="navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<a href="#" id="exibe_chat"><i class="fa fa-comments" aria-hidden="true"></i>&nbsp; Chat</a>
+						</li>
+						<li>
+							<a href="#" id="exibe_participantes"><i class="fa fa-users" aria-hidden="true"></i>&nbsp; Contacts</a>
+						</li>
+						<li class="divider"></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user-circle"></i>&nbsp; User <span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a href="#"><i class="fa fa-user"></i>&nbsp; Perfil</a></li>
+									<li class="divider"></li>
+									<li>
+										<a href="/" id=""><i class="fa fa-sign-out" aria-hidden="true"></i>&nbsp; Sair</a>
+									</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<div class="container">
+        <div class="row conversa" id="conversa">
+				<div class="col-md-1"></div>
+				<div class="col-md-10 container-dialogo">
+					<div class="dialogo">
+						<h4>Bill</h4>
+						<p>Fala Tauan, blz cara?</p>
+					</div>
+
+					<div class="dialogo">
+						<h4>Tauan</h4>
+						<p>Opa, tudo certo!</p>
+					</div>
+
+					<div class="dialogo">
+						<h4>Bill</h4>
+						<p>Vai estudar mais sobre NodeJS hoje?</p>
+					</div>
+
+					<div class="dialogo">
+						<h4>Tauan</h4>
+						<p>Sim, com certeza. Vamos trabalhar com Websockets hoje, o assunto é bem interessante</p>
+					</div>
+
+					<div class="dialogo">
+						<h4>Bill</h4>
+						<p>Show de bola, comunicação bi-direcional em páginas ou sistemas web é muito bacana mesmo</p>
+					</div>
+				</div>
+				<div class="col-md-1"></div>
+
+      </div>
+
+			<div class="row participantes" id="participantes" style="display:none">
+				<div class="col-md-1"></div>
+				<div class="col-md-10 container-participantes">
+					<span class="participante">
+						<img src="images/multiroom_chat_2.png" class="avatar-contact"/>
+						<i class="name-contact">Bill</i>
+					</span>
+						<hr>
+					<span class="participante">
+						<img src="images/multiroom_chat_2.png" class="avatar-contact"/>
+						<i class="name-contact">Steve</i>
+					</span>
+						<hr>
+					<span class="participante">
+						<img src="images/multiroom_chat_2.png" class="avatar-contact"/>
+						<i class="name-contact">John</i>
+					</span>
+				</div>
+				<div class="col-md-1"></div>
+
+            </div>
+        </div>
+
+		<nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+			<div class="container">
+				<div class="panel-body campo-mensagem">
+					<form>
+						<div class="col-md-12">
+							<div class="input-group">
+								<input type="text" class="form-control input-mensagem" placeholder="Mensagem">
+								<span class="input-group-btn">
+									<button class="btn btn-default btn-send" type="button"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+								</span>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</nav>
+
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+	</body>
+</html>

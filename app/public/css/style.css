@@ -1,0 +1,156 @@
+body {
+    background-color: #444;
+    background: url('../images/login-bg.jpg');
+}
+
+.form-signin input[type="text"] {
+    margin-bottom: 5px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.form-signin .form-control {
+    position: relative;
+    font-size: 16px;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    height: auto;
+    padding: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.vertical-offset-80 {
+    padding-top: 25%;
+}
+
+.img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+}
+.panel {
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.75);
+    border: 1px solid transparent;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+}
+
+.linha_usuario{
+    display: block;
+    margin-top:10px;
+    padding:5px;
+}
+
+.linha_usuario img{
+    margin-right:5px;
+    margin-top:-7px;
+}
+
+img {
+    vertical-align: middle;
+}
+.logo{
+  max-height: 180%;
+    margin-top: -7px;
+}
+
+.conversa{
+	margin-top:70px;
+	margin-bottom: 70px;
+}
+
+.participantes{
+	margin-top:70px;
+	margin-bottom: 70px;
+}
+
+.container-participantes{
+  color: #262626;
+  background: #fff;
+  border: 1px solid #262626;
+  border-radius: 10px;
+  top: 50px;
+}
+
+.avatar-contact{
+    height: 40px;
+}
+
+.name-contact{
+  font-size: 15px;
+  font-weight: 700;
+  color: #262626;
+  font-style: normal;
+}
+
+.participante{
+	display:block;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  cursor: pointer;
+}
+
+.participante img{
+	margin-top:-10px;
+}
+
+.container-dialogo{
+  top: 50px;
+}
+
+.dialogo{
+    width: 100%;
+    height: auto;
+    margin-bottom: 40px;
+    padding: 15px;
+    background: #dcf8c6;
+    border-radius: 15px;
+}
+
+.dialogo h4{
+    font-size: 15px;
+    margin-top: 2px;
+    font-weight: bold;
+    color: #262626;
+}
+
+.dialogo p{
+  font-size: 12px;
+  padding-left: 15px;
+  padding-top: 10px;
+  color: #262626;
+}
+
+.input-mensagem{
+  display: block;
+    width: 100%;
+    height: 50px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+.btn-send{
+    display: inline-block;
+    padding: 14px 12px;
+}
