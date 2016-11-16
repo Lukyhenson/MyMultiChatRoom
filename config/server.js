@@ -21,7 +21,7 @@ app.set('views', './app/views');
 app.use(express.static('.app/public'));
 
 /*configurar o middleware body-parse*/
-app.use(bodyParse.urlenconded({extended: true}));
+app.use(bodyParse.urlencoded({extended: true}));
 
 /*configurar o middleware express-validator*/
 app.use(expressValidator());
